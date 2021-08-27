@@ -5,7 +5,7 @@ app.set("port", 3333);
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.joson({ message: "Tudo Pronto" });
+  res.json({ message: "Tudo Pronto" });
 });
 
 module.exports = app;
