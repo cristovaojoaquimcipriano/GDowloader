@@ -1,0 +1,18 @@
+{
+  "name": "GDowloader",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/cristovaojoaquimcipriano/GDowloader.git",
+  "author": "Cristóvão Joquim Cipriano <ciprcristovai@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/",
+    "start": "node src/"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.3",
+    "nodemon": "^2.0.12",
+    "ytdl-core": "^4.9.1"
+  }
+}
