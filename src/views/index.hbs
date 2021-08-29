@@ -1,12 +1,34 @@
-<h1>
-  GDownloader
-</h1>
-<form action="/simpleUrl" method="POST">
-  <div>
-    <label for="">
-      Url
-    </label>
-    <input name="url" type="text" />
-    <input type="submit" value="Downloader" />
-  </div>
-</form>
+<section class="secSearch">
+  <form action="/simpleUrl" method="POST">
+    <div class="formControl">
+      <label for="">
+        Link of video
+      </label>
+      <input name="url" type="text" />
+      <input type="submit" value="Search" />
+    </div>
+  </form>
+</section>
+<section class="SecResult">
+  {{#if videoInfo}}
+    <div class="info">
+      <div class="imageCard">
+        <img src="{{videoInfo.image}}" alt="" />
+      </div>
+      <div class="card">
+        <h2>
+          Title:
+          {{videoInfo.title}}
+        </h2>
+        <form action="/download" method="post">
+          <button type="submit">
+            Downloader
+          </button>
+        </form>
+        {{#if status}}
+          {{status}}
+        {{/if}}
+      </div>
+    </div>
+  {{/if}}
+</section>
